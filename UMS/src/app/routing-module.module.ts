@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule, Routes} from "@angular/router";
-import {UserDetailComponent} from "./user-detail/user-detail.component";
-import {UsersComponent} from "./users/users.component";
-import {UserDataComponent} from "./user-data/user-data.component";
-import {RouteGuardService} from "./route-guard.service";
-import {LoginComponent} from "./login/login.component";
-import {SignupComponent} from "./signup/signup.component";
+import {RouterModule, Routes} from '@angular/router';
+import {UserDetailComponent} from './user-detail/user-detail.component';
+import {UsersComponent} from './users/users.component';
+import {UserDataComponent} from './user-data/user-data.component';
+import {RouteGuardService} from './route-guard.service';
+import {LoginComponent} from './login/login.component';
+import {SignupComponent} from './signup/signup.component';
 
 const  routes: Routes = [
     {
@@ -48,12 +48,12 @@ const  routes: Routes = [
 ];
 @NgModule({
   imports: [
-    CommonModule, 
+    CommonModule,
       RouterModule.forRoot(routes),
 
   ],
-    exports :[
-        RouterModule 
+    exports : [
+        RouterModule
     ],
     providers : [RouteGuardService],
   declarations: []

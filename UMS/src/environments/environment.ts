@@ -5,6 +5,12 @@
 
 export const environment = {
   production: false,
-  APIURL : 'http://localhost:8000/users/',
-  APIAUTH : 'http://localhost:8000/api/auth/'
+  // APIURL : 'http://localhost:8000/users/',
+  // APIAUTH: 'http://localhost:8000/api/auth/',
+  // APIURL : 'http://localhost/public/users/',
+  // APIAUTH: 'http://localhost/public/api/auth/',
+  // APIURL : 'http://localhost/LARAAPI/public/users',
+  // APIAUTH: 'http://localhost/LARAAPI/public/api/auth'
+  APIURL : 'http://20.71.42.205/LARAAPI/public/users',
+  APIAUTH : 'http://20.71.42.205/LARAAPI/public/api/auth',
 };

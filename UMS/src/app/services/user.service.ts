@@ -11,7 +11,7 @@ export class UserService {
 
     constructor(private http: HttpClient, private auth: AuthService) {
     }
-     getAuthHeader(): HttpHeaders {
+    getAuthHeader(): HttpHeaders {
          const headers = new HttpHeaders(
              {
                  Authorization : 'Bearer ' + this.auth.getToken()
@@ -19,23 +19,23 @@ export class UserService {
          );
          return headers;
      }
-       getUsers() {
+    getUsers() {
        return  this.http.get(this.APIURL , {
            headers: this.getAuthHeader()
        });
     }
     getUser(id: number) {
-        return  this.http.get(this.APIURL +  id,  {
+        return  this.http.get(this.APIURL + '/' +  id,  {
             headers: this.getAuthHeader()
         });
     }
 
     deleteUser(user) {
          const data = {_method: 'DELETE'} ;
-        return  this.http.post(this.APIURL   + '/' + user.id ,  data/*,
+        return  this.http.post(this.APIURL   + '/' + user.id ,  data,
             {
                 headers: this.getAuthHeader()
-            }*/
+            }
             );
     }
     updateUser(user: UserInterface) {
